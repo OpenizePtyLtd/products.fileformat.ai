@@ -1,0 +1,10 @@
+<div class="rhs-box ">
+    <div id="sticky1" class="stickytopheight"></div>
+    <div class="rhs-section api-link">
+        <h3>Free Online File Format Apps</h3>
+        {{ range $.Site.Sections.ByWeight }}
+        {{ $HomePage_H2_Text := .Page.Params.HomePage_H2_Text }}
+        <a href="#{{ replaceRE "(\\s)" "" .Page.Params.HomePage_H2_Text }}"> {{ $HomePage_H2_Text }}</a>
+        {{ end }}
+    </div>
+</div>

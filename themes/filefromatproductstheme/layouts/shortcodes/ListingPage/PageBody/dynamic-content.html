@@ -1,0 +1,99 @@
+{{ $listinglevel := .Get "type" }}
+<h3>{{ .Get "title" }}</h3>
+<div class="clearfix">&nbsp;</div>
+
+{{ if eq $listinglevel "level-one" }}
+        {{ $sectionName := $.Page.Type }}
+        {{  range (where $.Site.Pages ".Type" $sectionName) }}
+            {{ if ne .Kind "page" }}
+                {{ $ProductName := .Page.Params.ProductName }}
+                {{ if $ProductName }}
+                    {{ $ListingPage_Title_Text := .Page.Params.ListingPage_Title_Text }}
+                    {{ $ProductName := .Page.Params.ProductName }}
+                    {{ $ListingPage_Short_Description := .Page.Params.ListingPage_Short_Description }}
+                    {{ $ListingPage_Product_Small_Image := .Page.Params.ListingPage_Product_Small_Image }}
+                    {{ $ListingHeader_Title_Text := .Page.Params.ListingHeader_Title_Text }}
+                    {{ $ListingHeader_Alt_Text := .Page.Params.ListingHeader_Alt_Text }}
+
+
+                    {{ $dir := .RelPermalink }}
+                    {{ $dirp := replace $dir " " "/word-processing/" }}
+                    {{ $ppp := replace $dir $sectionName " " 2 }}
+                    {{ $ppp := replace $ppp "/" "" 2 }}
+                    {{ $colorfinal := replace $ppp "/" "" 2 }}
+                    {{ $colorfinal := replaceRE "(\\s)" "" $colorfinal }}
+
+                    <div class="col-lg-4 productfamily_box {{ $ppp }}">
+                        <div class="productfamilytitle">
+                            <div class="imgblock">
+                                {{ if $ListingPage_Product_Small_Image }}
+                                <img class="level-one lazyloaded bg-{{$colorfinal}}"
+                                     src="{{.RelPermalink}}{{ $ListingPage_Product_Small_Image }}"
+                                     alt="{{ $ListingHeader_Alt_Text }}"
+                                     title="{{ $ListingHeader_Title_Text }}"/>
+                                {{ else }}
+                                <img class="level-one lazyloaded bg-{{$colorfinal}}"
+                                     src="/fileformat/common/landing/images/common-listing-image.png"
+                                     alt="{{ $ListingHeader_Alt_Text }}"
+                                     title="{{ $ListingHeader_Title_Text }}"/>
+                                {{ end }}
+                            </div>
+                            <a href="{{ .RelPermalink }} ">
+                                <span class="spanclass ptbone">{{ $ListingPage_Title_Text }}<em> {{ $ProductName }}</em> </span>
+                                <em>{{ $ListingPage_Short_Description }}</em>
+                            </a>
+                        </div>
+                    </div>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+{{ else }}
+
+        {{ $sectionName := $.Page.Type }}
+        {{ $currentdir := .Page.RelPermalink }}
+
+        {{  range (where $.Site.RegularPages ".Type" $sectionName) }}
+            {{ $dir := .RelPermalink }}
+            {{ if in $dir $currentdir }}
+                {{ $ProductName := .Page.Params.ProductName }}
+                {{ if $ProductName }}
+
+                    {{ $ListingPage_Title_Text := .Page.Params.ListingPage_Title_Text }}
+                    {{ $ListingPage_Short_Description := .Page.Params.ListingPage_Short_Description }}
+                    {{ $ListingPage_Short_Description := .Page.Params.ListingPage_Short_Description }}
+                    {{ $ListingPage_Product_Small_Image := .Page.Params.ListingPage_Product_Small_Image }}
+                    {{ $ListingHeader_Title_Text := .Page.Params.ListingHeader_Title_Text }}
+                    {{ $ListingHeader_Alt_Text := .Page.Params.ListingHeader_Alt_Text }}
+
+
+                    {{ $dir := .RelPermalink }}
+                    {{ $dirp := replace $dir " " "/word-processing/" }}
+                    {{ $ppp := replace $dir $sectionName " " 2 }}
+                    {{ $ppp := replace $ppp "/" "" 2 }}
+                    {{ $colorfinal := replace $ppp "/" "" 2 }}
+                    {{ $colorfinal := replaceRE "(\\s)" "" $colorfinal }}
+                    {{- $imgpath := .Page.Resources.GetMatch $ListingPage_Product_Small_Image -}}
+                    <div class="col-lg-4 productfamily_box {{ $ppp }}">
+                        <div class="productfamilytitle">
+                            <div class="imgblock">
+                                {{ if $ListingPage_Product_Small_Image }}
+                                    {{ with $imgpath }}
+                                    <img class="not-level-one lazyloaded bg-{{$colorfinal}} bg-lite"
+                                         src="{{ .Permalink }}"
+                                         alt="{{ $ListingHeader_Alt_Text }}"
+                                         title="{{ $ListingHeader_Title_Text }}"/>
+                                    {{ end }}
+                                {{ end }}
+                            </div>
+                            <a href="{{ .RelPermalink }} ">
+                                <span class="spanclass ptb">{{ $ListingPage_Title_Text }}<em> {{ $ProductName }}</em> </span>
+                                <em>{{ $ListingPage_Short_Description }}</em>
+                            </a>
+                        </div>
+                    </div>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+{{ end }}

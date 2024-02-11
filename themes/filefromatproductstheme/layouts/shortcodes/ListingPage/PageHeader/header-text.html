@@ -1,0 +1,23 @@
+<div class="container-fluid header1 minify-header header3 tl fileformatproducheader"
+     style="height: inherit;">
+  <div class="container">
+    <div class="row pt-lg-5">
+      <div class="col-md-3 tc padding0 pull-right order-lg-2 mt-4">
+        <img class="totalimg lazyloaded" style="max-width: 220px; min-width: 220px!important; width: 220px; height: 220px!important;"
+              src="{{ .Get "Header_Image" }}"
+              alt="{{ .Get "Image_Alt_Text" }}"
+              title="{{ .Get "Image_title_Text" }}"
+              width="320"/>
+        <h3 class="listing-page-after-image pr-h3">{{ .Get "Image_H2_Text"  | safeHTML }} <em>{{ .Get "Image_Tag_Text"  | safeHTML  }}</em></h3>
+      </div>
+      <div class="col-md-9">
+        <div class="clearfix">&nbsp;</div>
+        <div class="clearfix">&nbsp;</div>
+        <h1>{{ .Get "Header_H1_Text"  | safeHTML  }}</h1>
+        <h2 class="pr-h2">{{ .Get "Header_H2_Text"  | safeHTML  }}</h2>
+      </div>
+      <!--/col6 -->
+    </div>
+    <!--/row --></div>
+  <!--/container -->
+</div>

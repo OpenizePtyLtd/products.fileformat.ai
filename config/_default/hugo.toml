@@ -1,0 +1,5 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Free AI Apps for Word, PowerPoint and PDF File Formats"
+theme =  "filefromatproductstheme"
+contentdir = "content/en"

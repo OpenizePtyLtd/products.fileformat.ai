@@ -1,0 +1,19 @@
+baseURL = "https://products.fileformat.ai/"
+
+[services.googleAnalytics]
+ID = "G-H5SCZF357V"
+
+[deployment]
+
+[[deployment.targets]]
+name = "Home"
+URL = "s3://products.fileformat.ai/?region=us-west-2"
+
+[[deployment.matchers]]
+# Set custom content type for /sitemap.xml
+#pattern = "^sitemap\\.xml$"
+#pattern = "^[a-z]\\.xml$"
+pattern = "^.+\\.(xml)$"
+contentType = "application/xml"
+gzip = true
+force = true

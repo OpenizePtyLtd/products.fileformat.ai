@@ -1,0 +1,26 @@
+<div class="col-lg-9">
+    <div class="col-lg-12  fam-product-section ">&nbsp;</div>
+    {{ range $.Site.Sections.ByWeight }}
+    {{ $HomePage_H2_Text := .Page.Params.HomePage_H2_Text }}
+    {{ $Homepage_Intro_Text := .Page.Params.Homepage_Intro_Text }}
+        <div class="col-lg-9">
+            <h2><a id="{{ replaceRE "(\\s)" "" .Page.Params.HomePage_H2_Text }}" class="anchor"
+                name="{{ replaceRE "(\\s)" "" .Page.Params.HomePage_H2_Text }}"></a>
+                <a href=" {{ .RelPermalink}} ">{{ $HomePage_H2_Text }}</a>
+                <em>{{ $Homepage_Intro_Text }}</em>
+            </h2>
+        </div>
+        <div class="col-lg-12 pf-urls">
+            {{ range .Pages.ByWeight }}
+            {{ $ListingPage_Title_Text := .Page.Params.ListingPage_Title_Text }}
+            {{ $ProductName := .Page.Params.ProductName }}
+            <a class="cloudbg btn " href="{{ .RelPermalink}}">
+                {{ $ListingPage_Title_Text }}<em> {{ $ProductName }}</em></a>
+            {{ end }}
+        </div>
+    <div class="brdr-spacer">&nbsp;</div>
+    {{ end }}
+</div>
+<div class="col-lg-3 rhs-menu mt-30px profuctfamilyrhs">
+    {{ partial "sidebar.html" . }}
+</div>

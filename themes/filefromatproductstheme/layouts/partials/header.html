@@ -1,0 +1,114 @@
+<head>
+  {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+  {{- template "_internal/google_analytics.html" . }}
+  {{- end -}}
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="{{ .Page.Params.description }}" />
+  <meta name="generator" content="File Format  | Home" />
+  <title>{{ .Title }}</title>
+  {{ with .Keywords }}
+  <meta
+    name="keywords"
+    content="{{ range $i, $e := . }}{{ if $i }} {{ end }}{{ $e }}{{ end }}"
+  />
+  {{ end }}
+  <link
+    href="/fileformat/common/landing/assets/favicon.ico"
+    rel="shortcut icon"
+    type="image/vnd.microsoft.icon"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/fileformat/common/landing/assets/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/fileformat/common/landing/assets/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/fileformat/common/landing/assets/favicon-16x16.png"
+  />
+  <link
+    rel="mask-icon"
+    href="/fileformat/common/landing/assets/safari-pinned-tab.svg"
+    color="#FFFFFF"
+  />
+  <link
+    rel="shortcut icon"
+    href="/fileformat/common/landing/assets/favicon.ico"
+  />
+  <meta
+    name="msapplication-config"
+    content="/fileformat/common/landing/assets/browserconfig.xml"
+  />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="author" content="FileFormat" />
+  <meta name="yandex-verification" content="df2b6a3f3d716464" />
+  <meta name="baidu-site-verification" content="j0cz9JwGI6" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no"
+  />
+  <meta
+    name="google-site-verification"
+    content="RF6mcO1DtVBGD1FbuBrV4oUFMtuDjpmf8VEtvb7ztz0"
+  />
+  <link
+    href="/fileformat/common/landing/assets/favicon.ico"
+    rel="shortcut icon"
+    type="image/vnd.microsoft.icon"
+  />
+  <!-- Bootstrap & Font CSS -->
+  <link
+    rel="stylesheet"
+    href="/fileformat/common/landing/css/bootstrap.css?v=335"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
+    type="text/css"
+  />
+  <!-- Common CSS -->
+  <link
+    rel="stylesheet"
+    href="/fileformat/common/landing/css/common.css?v1.0"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    href="/fileformat/common/landing/css/sdklogo.css?v1.1"
+    type="text/css"
+  />
+  <!-- Fileformat CSS -->
+  <link
+    href="/fileformat/common/landing/css/AsposePtyLtdMenu.css?v3.0"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    href="/fileformat/common/landing/css/font-awesome.css"
+    type="text/css"
+  />
+  <!-- Venture CSS -->
+  <link
+    rel="stylesheet"
+    href="/fileformat/common/landing/css/fileformat.css?v1.4"
+    type="text/css"
+  />
+  <style>
+    .bg-javascript {
+      background-color: rgb(245, 222, 25);
+      border-radius: 50%;
+    }
+  </style>
+</head>

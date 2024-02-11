@@ -1,0 +1,41 @@
+{{ $himage := .Page.Params.ListingPage_Product_Small_Image }}
+{{ $himage_class := .Page.Params.ListingPage_Product_Small_Image_class }}
+{{- $img := .Page.Resources.GetMatch $himage -}}
+<div class="container-fluid sub-menu-container">
+  <div id="sticky1" class="stickytopheight"> </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 title2">
+        <h4>
+          <span class="spanclass">
+            {{ if $himage }}
+            {{ with $img }}
+            <img class="{{if $himage_class }}{{ $himage_class }}{{else}} bg-lite {{end}} "  src="{{ .Permalink }}" alt="" width="60px">
+            {{ end }}
+              {{ end }}
+            {{ .Page.Params.ProductName }}
+          </span>
+        </h4>
+      </div>
+      <!--/col3 -->
+      <div class="col-md-6">
+        <h4 class="mb-hide">Overview</h4>
+        <ul class="nav nav-pills mb-hide"><!--<li><a class="active" href="/apache-poi#overview">Overview</a></li>
+                        <li><a href="/apache-poi#features">Features</a></li>--></ul>
+        <div class="submenu">
+          <ul class="submenul">
+            <li class="dropdown smenu-li">Overview
+              <ul class="dropdown-menu smenu-dd">
+                <li>Features</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--/col6 -->
+      <div class="col-md-4 sub-rhs tr">
+        <div class="btn-group"><a class="btn btn-success" title="{{ .Page.Params.ProductName }}" href="{{  .Page.Params.Githublink  }}"><em class="fa fa-github">&nbsp;</em> Github</a><!-- <a class="btn btn-success" href="https://wiki.fileformat.com/open-source-products/apache-poi/"><em class="fa fa-upload"> </em> Learn</a>--></div>
+      </div>
+      <!--/3 --></div>
+  </div>
+  <!--/container --></div>

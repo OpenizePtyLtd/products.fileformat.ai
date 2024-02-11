@@ -1,0 +1,44 @@
+{{ $himage := .Get "Header_Image" }}
+{{- $img := .Page.Resources.GetMatch $himage -}}
+{{ $Image_Alt_Text := .Get "Image_Alt_Text" }}
+{{ $mage_title_Text := .Get "Image_title_Text" }}
+{{ $Header_H2_Text := .Get "Header_H2_Text" }}
+{{ $Header_H1_Text := .Get "Header_H1_Text" }}
+{{ $Image_Tag_Text := .Get "Image_Tag_Text" }}
+{{ $ProductName := .Page.Params.ProductName }}
+<div class="container-fluid header1 minify-header header3 tl fileformatproducheader" style="height: inherit;">
+    <div class="container">
+        <div class="row pt-lg-5">
+            {{ with $img }}
+            <div class="col-md-3 tc padding0 pull-right order-lg-2 mt-4">
+                {{ with $img }}
+                <img class="totalimg lazyloaded bgheader-lite"
+                  style="max-width: 220px; min-width: 220px!important; width: 220px; height: 220px!important;"
+                     src="{{ .Permalink }}"
+                    alt="{{ $Image_Alt_Text }}"
+                    title="{{ $mage_title_Text }}"
+                     width="320">
+                {{ end }}
+                {{ if $Image_Tag_Text }}
+                <h3 class="pr-h3 single-page-after-image">{{ $Image_Tag_Text }}</h3>
+                {{ else }}
+                <h3 class="pr-h3 single-page-after-image">{{ $ProductName }}</h3>
+                {{ end }}
+            </div>
+            <div class="col-md-9">
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <h1>{{ $Header_H1_Text | safeHTML }}</h1>
+                <h2 class="pr-h2">{{ $Header_H2_Text | safeHTML }}</h2>
+            </div>
+            {{ else }}
+            <div class="col-md-12 tc">
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;&nbsp;</div>
+                <h1 style="margin-top: auto!important;">{{ $Header_H1_Text | safeHTML }}</h1>
+                <h2>{{ $Header_H2_Text | safeHTML }}</h2>
+            </div>
+            {{ end }}
+            <!--/col6 --></div>
+        <!--/row --></div>
+    <!--/container --></div>
