@@ -1,11 +1,11 @@
 ---
 title: Free AI Apps for Word Documents
-description: FREE Online AI Apps to summarize and Mask Microsoft Word & OpenOffice file formats
+description: FREE Online AI Apps to summarize, Translate and Mask Microsoft Word & OpenOffice file formats
 keywords: Free Word AI Apps, Summarize Word Documents, AI Mask files
 draft: false
 weight: 1
 HomePage_H2_Text: Word Processing AI Apps
-Homepage_Intro_Text: Summarize, Mask confidential data and do more with Microsoft Word DOC, DOCX and related files.
+Homepage_Intro_Text: Summarize, Translate and Mask confidential data and do more with Microsoft Word DOC, DOCX and related files.
 
 
 
@@ -20,7 +20,7 @@ Image_Tag_Text="AI Apps"
 Image_Alt_Text=" "
 Image_title_Text=" "
 Header_H1_Text="Word Processing AI Apps"
-Header_H2_Text="Summarize, Mask confidential data and do more with Microsoft Word DOC, DOCX and related files." >}}
+Header_H2_Text="Summarize, Translate and Mask confidential data and do more with Microsoft Word DOC, DOCX and related files." >}}
 
 {{< ListingPage/PageBody/wrapper >}}
 {{< ListingPage/PageBody/dynamic-content type="level-one" title="Word Processing AI Apps Include" >}}

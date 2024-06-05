@@ -1,11 +1,11 @@
 ---
 title: Free AI Apps for Email Storage Files
-description: FREE Online AI Apps to summarize and Mask Microsoft Outlook email MSG & email storage PST & OST files.
+description: FREE Online AI Apps to summarize and Translate Microsoft Outlook email MSG & email storage PST & OST files.
 
 draft: false
 weight: 5
 HomePage_H2_Text: Email AI Apps
-Homepage_Intro_Text: Summarize, Mask confidential data in Microsoft Outlook files.
+Homepage_Intro_Text: Summarize, translate data in Microsoft Outlook files.
 
 
 
@@ -20,7 +20,7 @@ Image_Tag_Text="AI Apps"
 Image_Alt_Text=" "
 Image_title_Text=" "
 Header_H1_Text="AI Email AI Apps"
-Header_H2_Text="Summarize, Mask confidential data in Microsoft Outlook files." >}}
+Header_H2_Text="Summarize, translate data in Microsoft Outlook files." >}}
 
 {{< ListingPage/PageBody/wrapper >}}
 {{< ListingPage/PageBody/dynamic-content type="level-one" title="Email AI Apps Include" >}}

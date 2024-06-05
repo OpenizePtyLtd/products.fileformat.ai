@@ -3,7 +3,7 @@ title:
 description: 
 keywords: 
 draft: false
-weight: 5
+weight: 1
 
 ProductName: Summarize
 ListingPage_Title_Text:  Email AI Apps
