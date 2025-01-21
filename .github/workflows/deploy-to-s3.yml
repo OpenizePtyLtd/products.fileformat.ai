@@ -40,18 +40,6 @@ jobs:
           # hugo-version: 'latest'
           hugo-version: '0.110.0'
 
-    # Step 3 - Clean and don't fail
-#    - name: Clean public directory
-#      run: rm -rf public
-
-    # Step 4 - Builds the site using the latest version of Hugo
-    # Also specifies the theme we want to use
-    - name: Install Dependicies1
-      run:  npm install -D --save autoprefixer
-
-    - name: Install Dependicies2
-      run:  npm install -D --save postcss-cli
-
     - name: Build Home
       run: hugo --minify --environment production
 
