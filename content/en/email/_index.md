@@ -6,9 +6,6 @@ draft: false
 weight: 5
 HomePage_H2_Text: Email AI Apps
 Homepage_Intro_Text: Summarize, translate data in Microsoft Outlook files.
-
-
-
 ---
 
 {{< ListingPage/PageLayout/wrapper >}}
@@ -19,7 +16,7 @@ Image_H2_Text="Email "
 Image_Tag_Text="AI Apps"
 Image_Alt_Text=" "
 Image_title_Text=" "
-Header_H1_Text="AI Email AI Apps"
+Header_H1_Text="Email AI Apps"
 Header_H2_Text="Summarize, translate data in Microsoft Outlook files." >}}
 
 {{< ListingPage/PageBody/wrapper >}}
