@@ -6,9 +6,6 @@ draft: false
 weight: 4
 HomePage_H2_Text: PDF AI Apps
 Homepage_Intro_Text: Summarize, Translate and Mask confidential data and do more with PDF files with our 100% FREE AI apps.
-
-
-
 ---
 
 {{< ListingPage/PageLayout/wrapper >}}
