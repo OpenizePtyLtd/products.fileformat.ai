@@ -1,10 +1,22 @@
 baseURL = "https://products-qa.fileformat.ai/"
 
+[params]
+env = "staging"
+
 [deployment]
 
 [[deployment.targets]]
-name = "Home"
+name = "staging"
 URL = "s3://products-qa.fileformat.ai/?region=us-west-2"
+
+[[deployment.targets]]
+name = "staging-ceph"
+URL = "s3://products.fileformat.ai/?endpoint=https://s3-qa.dynabic.com&region=us-east-1"
+
+[ceph]
+host = "s3-qa.dynabic.com"
+usehttps = "Yes"
+bucketname = "products.fileformat.ai"
 
 [[deployment.matchers]]
 # Set custom content type for /sitemap.xml
